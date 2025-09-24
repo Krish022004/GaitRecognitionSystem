@@ -42,7 +42,7 @@ def upload_file():
                 message = "Invalid name or video, please check and re-upload."
 
             status = 'success' if tag else 'warning'
-            flash(message, status)  # 显示message
+            flash(message, status)
 
         return redirect(url_for('index'))
 
@@ -70,7 +70,7 @@ def gait_recognition():
                 return render_template('video.html', images=images, cut_images=cut_images)
             else:
                 print(message)
-                flash(message, 'warning')  # 显示message
+                flash(message, 'warning')
 
         return redirect(url_for('index'))
 
